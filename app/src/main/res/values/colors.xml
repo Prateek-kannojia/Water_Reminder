@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="violet">#332F61</color>
+    <color name="light_violet">#918CFF</color>
+
+    <color name="colorPrimary">@color/violet</color>
+    <color name="colorOnPrimary">@color/white</color>
+
+    <color name="colorSecondary">@color/light_violet</color>
+    <color name="colorOnSecondary">@color/white</color>
+
+    <color name="background">@color/white</color>
+    <color name="indicator_color">@color/colorSecondary</color>
+    <color name="track_color">#DDD</color>
+
+</resources>

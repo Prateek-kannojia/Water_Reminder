@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Homefragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="60dp"
+        app:rippleColor="@color/colorPrimary"
+        android:elevation="5dp"
+        app:fabCustomSize="75dp"
+        android:src="@drawable/add"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/water_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:indicatorSize="200dp"
+        android:indeterminate="false"
+        app:indicatorColor="@color/indicator_color"
+        app:trackColor="@color/track_color"
+        app:trackCornerRadius="15dp"
+        app:trackThickness="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/water_percentage"
+        app:layout_constraintEnd_toEndOf="@+id/water_percentage"
+        app:layout_constraintStart_toStartOf="@+id/water_percentage"
+        app:layout_constraintTop_toTopOf="@+id/water_percentage">
+
+        <TextView
+            android:id="@+id/consumed_water"
+            style="@style/Mytext"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="0"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/ml"
+            style="@style/Mytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/consumed_water"
+            android:layout_toEndOf="@id/consumed_water"
+            android:layout_marginBottom="4dp"
+            android:text="@string/ml"
+            android:textAlignment="textStart"
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
